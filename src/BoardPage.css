@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.topic {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 800;
+    background-color: #ebfcff;
+    min-height: 100vh;
+}
+
+.createbuttonpost {
+    background-color: #f14349;
+
+    font-size: 15px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.create-post-modal {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    width: 500px;
+    margin-top:  10%;
+    margin-left: 35%;
+    border: 1px solid rgb(234, 217, 217);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subjectinput {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(158, 147, 147);
+    margin-top: 10px;
+    text-align: left;
+    display: block;
+}
+
+.choosefile {
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.choosefile::-webkit-file-upload-button {
+    padding: 10px;
+    border: none;
+    background-color: #f14349;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.choosefile::-webkit-file-upload-button:hover {
+    background-color: #3e8e41;
+}
+
+.choosefile::-webkit-file-upload-button:active {
+    background-color: #3e8e41;
+}
+
+textarea {
+    border: 1px solid grey;
+    padding: 5px;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+.publishbutton {
+    display: block;
+    text-align: left;
+    background-color: #f14349;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 80%;
+    border-radius: 4px;
+}
+
+/* .posts {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.post {
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+} */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    grid-column-gap: 5vh;
+  }
+  
+  .post {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+.post img {
+    margin-top: 20px;
+    height: 170px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post p {
+    font-size: 15px;
+    font-weight: 300;
+}
