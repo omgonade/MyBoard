@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BoardToddle/static/css/main.cfd3646f.css",
+    "main.js": "/BoardToddle/static/js/main.0a79da02.js",
+    "index.html": "/BoardToddle/index.html",
+    "main.cfd3646f.css.map": "/BoardToddle/static/css/main.cfd3646f.css.map",
+    "main.0a79da02.js.map": "/BoardToddle/static/js/main.0a79da02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfd3646f.css",
+    "static/js/main.0a79da02.js"
+  ]
+}
