@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.mylogo {
+    margin-top: 30px;
+
+}
+
+.main {
+    background-image: url('./img/cool-background.png');
+    border: 1px solid transparent;
+    /* background-size: cover; */
+    /* background-position: center; */
+    
+}
+
+.mylogo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.om {
+    margin-top: 20px;
+    --borderWidth: 5px;
+    height: 45vh;
+    width: 36vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: var(--borderWidth);
+    background: rgb(255, 255, 255);
+    position: relative;
+}
+
+.om img,.viewResume button{
+    height: 45vh;
+    width: 36vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 0px;
+    position:relative;
+    z-index: 2;
+    
+}
+
+.om:after,.viewResume button {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: 1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.name {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: transparent;
+    margin-top: 2vh;
+    display: block;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    -webkit-background-clip: text;
+    /*It specifies the painting area here painting area of background is text*/
+    -webkit-text-fill-color: transparent;
+    /*Now if we make text color transparent then we can see the effect*/
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.description {
+    padding: 20px;
+    text-align:justify;
+    font-size: 25px;
+    margin-top: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-family: 'Ysabeau Infant';
+    color: rgb(107, 106, 106);
+}
+.viewResume{
+    text-align: right;
+    margin-right: 15vh;
+}
+.viewResume button{
+    border:none;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    position: relative;
+    color:white;
+    font-weight: 700;
+    font-family:'Ysabeau Infant' ;
+    padding: 10px;
+    font-size:25px;
+    cursor: pointer;
+}

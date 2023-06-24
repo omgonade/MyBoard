@@ -4,6 +4,7 @@ import './App.css';
 import { NavBar } from './NavBar';
 import { Home } from './home';
 import BoardPage from './BoardPage';
+import { AboutMe } from './AboutMe';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/AboutMe" element={<AboutMe/>}/>
           <Route path="/board/:boardName" element={<BoardPage />} />
         </Routes>
       </div>

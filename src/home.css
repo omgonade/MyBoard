@@ -3,11 +3,15 @@
     margin:0;
     box-sizing: border-box;
     text-align: left;
+    
 }
 .content{
     padding: 20px;
     font-size: 30px;
     font-weight: 600;
+    background-image: url('C:\Users\admin\Desktop\toddle\toddle\src\img\bg1.jpg');
+    background-size:cover;
+    height: 100vh;
 }
 .boards{
     display: grid;

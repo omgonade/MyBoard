@@ -60,7 +60,7 @@ const BoardPage = () => {
   };
   return (
     <div className='topic'>
-      {boardName}
+      <span className='boarName'>{boardName}</span>
       <div className='createPost'>
         <button className='createbuttonpost' onClick={openCreatePostModal}>
           + Create new post

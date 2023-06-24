@@ -10,10 +10,18 @@
     font-weight: 800;
     background-color: #ebfcff;
     min-height: 100vh;
+    background-image: url('C:\Users\admin\Desktop\toddle\toddle\src\img\bg3.jpg');
+    background-size:cover;
+    
 }
 
+.boarName{
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+}
 .createbuttonpost {
-    background-color: #f14349;
+    background-color: #1e76e1;
 
     font-size: 15px;
     color: white;

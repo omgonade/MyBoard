@@ -1,16 +1,18 @@
-
 import React, { useEffect, useState } from 'react';
 import './home.css';
 import boardimg from './img/boardimg.png';
 import { useNavigate } from 'react-router-dom';
-
+import { NavBar } from './NavBar';
+import boardData from './boarddata';
 export const Home = () => {
   const [showCreateBoardModal, setShowCreateBoardModal] = useState(false);
   const [boardName, setBoardName] = useState('');
   const [boardLinks, setBoardLinks] = useState([]);
-
+  const [boards, setBoards] = useState(['Earth Changes & journey', 'Eating Right']);
+  const [showNavBar, setShowNavBar] = useState(false);
   const navigate = useNavigate();
-
+  // const mergedBoards = [...boards, ...boardData];
+  // setBoards(mergedBoards);
   const openCreateBoardModal = () => {
     setShowCreateBoardModal(true);
   };
@@ -19,6 +21,13 @@ export const Home = () => {
     setShowCreateBoardModal(false);
     setBoardName('');
   };
+  useEffect(() => {
+    const storedBoardNames = localStorage.getItem('boardNames');
+    if (storedBoardNames) {
+      const boardNamesArray = JSON.parse(storedBoardNames);
+      setBoards((prevArray) => [...prevArray, ...boardNamesArray]);
+    }
+  }, []);
 
   const handleCreateBoard = () => {
     const newBoardLink = `/board/${boardName}`;
@@ -30,8 +39,6 @@ export const Home = () => {
   useEffect(() => {
     localStorage.setItem('boardLinks', JSON.stringify(boardLinks));
   }, [boardLinks]);
-
-  const boards = ['Earth Changes & journey', 'Eating Right'];
 
   return (
     <div className='home'>
@@ -55,7 +62,7 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* Rest of the code */}
+      
     </div>
   );
 };
