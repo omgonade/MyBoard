@@ -11,16 +11,61 @@
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: rgba(50, 50, 92, 0.1) 0 30px 30px -20px;
+    box-shadow: rgba(67, 67, 127, 0.498) 0 30px 30px -20px;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
+    justify-content: space-between;   
 
+}
+.containerAbout{
+    height: 6rem;
+    line-height: 5rem;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(50, 50, 202, 0.381) 0 30px 30px -20px;
+    z-index: 1000;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;   
+    --borderWidth:0px;
+    /* border-bottom: 2px solid white; */
+}
+.containerAbout::after{
+    content: '';
+    position:absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .container2 {
     display: flex;
-    padding: 50px
+    padding: 50px;
+    padding-bottom:auto;
+    padding-top: auto;
+    margin-right: 5vh;
 }
 
 .logo {
@@ -32,18 +77,6 @@
     cursor: pointer;
 }
 
-/* 
-.createbutton {
-    background-color: #1e76e1;
-    font-size: 20px;
-    color: white;
-    padding: 10px;
-    margin: 25px;
-    display: flex;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-} */
 .btn {
     border: 1px solid #1760b8;
     background: none;
@@ -95,23 +128,30 @@
 
 
 .create-board-modal {
-    background-color: white;
+    background:url('./img/w.jpg');
     text-align: center;
     padding: 20px;
     width: 500px;
     margin-top: 20%;
     margin-left: 35%;
     border: 1px solid rgb(234, 217, 217);
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index:9999;
 }
 
 .create-board-modal input {
     font-size: 20px;
     padding: 5px;
     border-radius: 10px;
-    border: 1px solid rgb(158, 147, 147);
+    border: 2px solid white;
     margin: 30px;
+    background: transparent;
+    color:white;
+}
+.create-board-modal input::placeholder{
+    color:white;
+    
 }
 
 .create-board-modal .create-button {
@@ -124,6 +164,7 @@
     background-color: #1e76e1;
     color: white;
     font-family: 'Ysabeau Infant';
+    cursor: pointer;
 }
 
 .text1 {
@@ -135,32 +176,44 @@
     display: inline-flex;
     background: none;
     border: none;
-    width: 60px;
-    height: 60px;
-    position: relative;
+    width: 40px;
+    height: 40px;
+    position:relative;
     cursor: pointer;
+    padding: 0;
+    /* border:1px solid black; */
+
+    
 }
 
 .close-button:after {
     content: '';
-    height: 30px;
-    border-left: 2px solid black;
+    height: 35px;
+    border-left: 3px solid white;
     position: absolute;
     transform: rotate(45deg);
-    left: 28px;
+    left: 18px;
+    top:2px;
     cursor: pointer;
+    /* position: relative; */
 }
 
 .close-button:before {
     content: '';
-    height: 30px;
-    border-left: 2px solid black;
+    height: 35px;
+    border-left: 3px solid white;
     position: absolute;
     transform: rotate(-45deg);
-    left: 28px;
+    left: 18px;
+    top:2px;
     cursor: pointer;
+    /* position:relative; */
 }
-.use {
+.close-button:hover{
+    background-color: rgba(255, 251, 251, 0.139);
+    border-radius: 5px;
+}
+.use,.useAbout {
     padding: 20px;
     line-height: 20px;
     font-size: 25px;
@@ -170,21 +223,14 @@
     margin: 20px;
     transition: color 0.8s; 
   }
-  
+  .useAbout{
+    color:white;
+  }
   .use:hover {
     color: #1760b8;
     font-weight: 900;
   }
-/* .create-board-modal .close-button {
-    margin: 8px;
-    display: flex;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    color: #333;
 
-
-} */
+.create-button{
+    background:url('./img/wooden.jpeg');
+}
